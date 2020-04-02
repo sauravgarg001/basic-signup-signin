@@ -43,7 +43,7 @@ $(document).ready(function() {
             $("#pno_feedback").css("display", "block").html("Enter your Phone Number?");
             $(this).removeClass("is-valid").addClass("is-invalid");
         } else if (!patt.test($(this).val())) {
-            $("#pno_feedback").css("display", "block").html("Invalid Phone Number must of 11 digits begining with 0!");
+            $("#pno_feedback").css("display", "block").html("Invalid, Phone Number must be of 10 digits not begining with 0!");
             $(this).removeClass("is-valid").addClass("is-invalid");
         } else {
             $.get("index-pno-process.php?pno=" + $(this).val(), function(response) {
